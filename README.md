@@ -1,10 +1,14 @@
-Here’s the text with only the Vercel link added:
+Here's the corrected version with the placeholder path updated:
 
 ---
 
 ### 🌍 Welcome to **Country Explorer**!
 
 **Country Explorer** is your go-to app for discovering and learning about countries worldwide. Easily search for any country, explore them by region, and dive into detailed info on each one.
+
+![Country Explorer Screenshot](./images/screenshot.png)
+
+*Screenshot of the Country Explorer app interface.*
 
 ---
 
@@ -37,6 +41,6 @@ Give **Country Explorer** a try and enjoy discovering the world!
 
 [Explore Country Explorer](https://country-explorer-woad-gamma.vercel.app/)
 
---- 
+---
 
-Let me know if you need any more changes!
+`.image.jpeg`
