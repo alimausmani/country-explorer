@@ -4,7 +4,7 @@ Here's the corrected version with the placeholder path updated:
 
 ### 🌍 Welcome to **Country Explorer**!
 
-**Country Explorer** is your go-to app for discovering and learning about countries worldwide. Easily search for any country, explore them by region, and dive into detailed info on each one.
+**Country Explorer** is a web  for discovering and learning about countries worldwide. Easily search for any country, explore them by region, and dive into detailed info on each one.
 
 ![Country Explorer Screenshot](./image.jpeg)
 
