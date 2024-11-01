@@ -6,7 +6,7 @@ Here's the corrected version with the placeholder path updated:
 
 **Country Explorer** is your go-to app for discovering and learning about countries worldwide. Easily search for any country, explore them by region, and dive into detailed info on each one.
 
-![Country Explorer Screenshot](./images/screenshot.png)
+(./images.jpeg)
 
 *Screenshot of the Country Explorer app interface.*
 
@@ -41,6 +41,3 @@ Give **Country Explorer** a try and enjoy discovering the world!
 
 [Explore Country Explorer](https://country-explorer-woad-gamma.vercel.app/)
 
----
-
-`.image.jpeg`
