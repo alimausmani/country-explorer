@@ -1,4 +1,6 @@
+Here’s the text with only the Vercel link added:
 
+---
 
 ### 🌍 Welcome to **Country Explorer**!
 
@@ -32,3 +34,9 @@
 ---
 
 Give **Country Explorer** a try and enjoy discovering the world!
+
+[Explore Country Explorer](https://country-explorer-woad-gamma.vercel.app/)
+
+--- 
+
+Let me know if you need any more changes!
