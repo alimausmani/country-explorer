@@ -18,6 +18,10 @@ Here's the corrected version with the placeholder path updated:
 - **🌎 Region Filter**: Pick a region like Asia or Europe to see just those countries.
 - **⬇️ Load More**: Start with a few and load more countries as you scroll.
 - **📄 Country Details**: Click "View Details" on any country to see more about its population, region, and other interesting facts.
+- **🔗 View Details**: Click on a country card to navigate to the details page and see rich information.
+
+
+- **⭐ Manage Favorites**: Click the favorites icon on the details page to mark countries as favorites. You can remove favorites or add new ones, with the favorites displayed on the main page.
 
 ---
 
