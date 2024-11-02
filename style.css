@@ -1,4 +1,3 @@
-/* General Styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +12,6 @@ body {
   color: #333;
 }
 
-/* Header Styling */
 header {
   display: flex;
   align-items: center;
@@ -57,12 +55,28 @@ select {
   cursor: pointer;
 }
 
-/* Country List Styling */
+#favorites-icon {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#favorites-image {
+  width: 24px; 
+  height: 24px;
+  margin-right: 5px;
+}
+
+#favorites-counter {
+  font-size: 16px;
+  color: #fff;
+}
+
 #country-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
   gap: 20px;
 }
 
@@ -71,7 +85,7 @@ select {
   border: 1px solid #ddd;
   border-radius: 8px;
   min-width: 220px;
-  width: 25%;
+  width: calc(25% - 20px); /* Responsive width with gap adjustment */
   padding: 15px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,7 +121,6 @@ select {
   margin: 5px 0;
 }
 
-/* Button Styling */
 button {
   background-color: #454c55;
   color: #fff;
@@ -124,7 +137,6 @@ button:hover {
   transform: translateY(-3px);
 }
 
-/* Load More Button */
 #load-more {
   display: block;
   margin: 20px auto;
@@ -132,7 +144,6 @@ button:hover {
   background-color: #007bff;
 }
 
-/* Country Details Styling for Second Page */
 #country-details-container {
   max-width: 800px;
   margin: 50px auto;
@@ -161,7 +172,7 @@ button:hover {
   text-align: center;
 }
 
-/* Back Button Styling */
+
 #back-button {
   background-color: #ddd;
   color: #333;
@@ -177,7 +188,6 @@ button:hover {
   background-color: #bbb;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -195,5 +205,51 @@ button:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.favorite-button {
+  background-color: #ffcccc;
+  border: none;
+  color: red;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 1200px) {
+  .country-card {
+    width: calc(33.33% - 20px); 
+  }
+}
+
+@media (max-width: 800px) {
+  .country-card {
+    width: calc(50% - 20px); 
+  }
+
+  input[type="text"] {
+    width: 200px; 
+  }
+
+  h1 {
+    font-size: 24px; 
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  input[type="text"] {
+    width: 100%; 
+  }
+
+  .country-card {
+    width: 100%; 
   }
 }
