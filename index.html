@@ -11,7 +11,10 @@
 <body>
     <header>
         <h1>Country Explorer</h1>
-        <input type="text" id="search" placeholder="Search for a country..." />
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a country..." />
+            <div id="suggestions" class="suggestions-dropdown"></div>
+        </div>
         <select id="region-filter">
             <option value="all">Filter by Region</option>
             <option value="Africa">Africa</option>
@@ -28,7 +31,7 @@
             <span id="favorites-counter">0</span>
         </div>
     </header>
-
+    
     <main id="country-list"></main>
     <button id="load-more">Show More</button>
 

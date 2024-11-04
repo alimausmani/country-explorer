@@ -255,3 +255,27 @@ button:hover {
 }
 
 
+.search-container {
+  position: relative; 
+}
+
+.suggestions-dropdown {
+  position: absolute; 
+  background-color: #6b88b4;
+  border: 1px solid #ccc;
+  width: calc(100% - 20px);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none; 
+  margin-top: 5px; 
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: hsl(0, 4%, 22%);
+}
