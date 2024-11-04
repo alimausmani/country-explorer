@@ -30,8 +30,12 @@ function displayCountries() {
     countryCard.innerHTML = `
       <img src="${country.flags.png}" alt="${country.name.common} flag" />
       <h2>${country.name.common}</h2>
-      <p>Population: ${country.population.toLocaleString()}</p>
-      <p>Region: ${country.region}</p>
+      <p><strong>Top Level Domain:</strong> ${country.tld ? country.tld.join(", ") : "N/A"}</p>
+      <p><strong>Capital:</strong> ${country.capital ? country.capital[0] : "N/A"}</p>
+      <p><strong>Region:</strong> ${country.region}</p>
+      <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+      <p><strong>Area:</strong> ${country.area ? country.area.toLocaleString() + " km²" : "N/A"}</p>
+      <p><strong>Languages:</strong> ${country.languages ? Object.values(country.languages).join(", ") : "N/A"}</p>
       <button onclick="viewCountryDetails('${country.name.common}')">View Details</button>
       <button class="favorite-button" onclick="toggleFavorite('${country.name.common}')">
         ${favorites.includes(country.name.common) ? "Remove from Favorites" : "Add to Favorites"}
@@ -41,7 +45,6 @@ function displayCountries() {
   });
   displayedCountries += countriesToDisplay.length;
 }
-
 
 function filterCountries() {
   const searchValue = searchInput.value.toLowerCase();
@@ -82,6 +85,10 @@ window.addEventListener("load", () => {
   updateFavoritesCounter();
 });
 
+function showFavoritesPage() {
+  window.location.href = "favorites.html";
+}
+
 function viewCountryDetails(countryName) {
   const country = countries.find(c => c.name.common === countryName);
   localStorage.setItem("selectedCountry", JSON.stringify(country));
@@ -93,4 +100,3 @@ regionFilter.addEventListener("change", filterCountries);
 loadMoreButton.addEventListener("click", displayCountries);
 
 fetchCountries();
-
