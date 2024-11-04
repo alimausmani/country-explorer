@@ -1,6 +1,7 @@
 const countryList = document.getElementById("country-list");
 const searchInput = document.getElementById("search");
 const regionFilter = document.getElementById("region-filter");
+const languageFilter = document.getElementById("language-filter");
 const loadMoreButton = document.getElementById("load-more");
 const favoritesCounter = document.getElementById("favorites-counter");
 
@@ -15,11 +16,30 @@ async function fetchCountries() {
     const response = await fetch("https://restcountries.com/v3.1/all");
     countries = await response.json();
     filteredCountries = countries;
+
+    populateLanguageFilter(countries);
     displayCountries();
     updateFavoritesCounter();
   } catch (error) {
     console.error("Error fetching countries:", error);
   }
+}
+
+function populateLanguageFilter(countries) {
+  const languages = new Set();
+
+  countries.forEach(country => {
+    if (country.languages) {
+      Object.values(country.languages).forEach(language => languages.add(language));
+    }
+  });
+
+  languages.forEach(language => {
+    const option = document.createElement("option");
+    option.value = language;
+    option.textContent = language;
+    languageFilter.appendChild(option);
+  });
 }
 
 function displayCountries() {
@@ -49,11 +69,14 @@ function displayCountries() {
 function filterCountries() {
   const searchValue = searchInput.value.toLowerCase();
   const selectedRegion = regionFilter.value;
+  const selectedLanguage = languageFilter.value;
 
   filteredCountries = countries.filter(country => {
     const matchesSearch = country.name.common.toLowerCase().includes(searchValue);
     const matchesRegion = selectedRegion === "all" || country.region === selectedRegion;
-    return matchesSearch && matchesRegion;
+    const matchesLanguage = selectedLanguage === "all" || (country.languages && Object.values(country.languages).includes(selectedLanguage));
+    
+    return matchesSearch && matchesRegion && matchesLanguage;
   });
 
   displayedCountries = 0;
@@ -97,6 +120,7 @@ function viewCountryDetails(countryName) {
 
 searchInput.addEventListener("input", filterCountries);
 regionFilter.addEventListener("change", filterCountries);
+languageFilter.addEventListener("change", filterCountries); 
 loadMoreButton.addEventListener("click", displayCountries);
 
 fetchCountries();
