@@ -10,24 +10,19 @@
     <header>
         <h1>Favorite Countries</h1>
     </header>
-
-    <main id="favorites-container" style="padding: 20px;"></main>
-    <button 
-        onclick="window.location.href='index.html'" 
-        style="
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        ">
-        Back to Home
-    </button>
-
-    <script src="./favorites.js"></script>
+    <main style="display: flex; gap: 20px;">
+        <section id="country-list-container" style="flex: 3;">
+            <div id="country-list"></div>
+        </section>
+        
+        <aside id="selected-country-details" style="flex: 1; padding: 20px; border-left: 2px solid #ccc;">
+            <!-- Country details will appear here when a favorite is clicked -->
+            <h2>Country Details</h2>
+            <div id="country-details-container"></div>
+        </aside>
+    </main>
+    <script src="./script.js"></script>
 </body>
+
 </html>
+

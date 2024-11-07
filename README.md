@@ -6,7 +6,7 @@ Here's the corrected version with the placeholder path updated:
 
 **Country Explorer** is a website  for discovering and learning about countries worldwide. Easily search for any country, explore them by region, and dive into detailed info on each one.
 
-![Country Explorer Screenshot](./Image.png)
+![Country Explorer Screenshot](./assets/Image.png)
 
 *Screenshot of the Country Explorer app interface.*
 
