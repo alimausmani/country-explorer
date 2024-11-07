@@ -26,16 +26,31 @@
         <select id="language-filter">
             <option value="all">Filter by Language</option>
         </select>
-        <div id="favorites-icon" onclick="showFavoritesPage()">
+      
+
+
+
+    </header>
+    
+    <div id="container">
+
+    <div id="left">
+    <main id="country-list"></main>
+    <button id="load-more">Show More</button>
+</div>
+    <div id="right">
+        <div style="display: flex;align-self: center;">
+        <h2>Favorites</h2>
+        <div id="favorites-icon">
             <img src="/assets/heart-icon.png" alt="Favorites" id="favorites-image" />
             <span id="favorites-counter">0</span>
         </div>
-    </header>
-    
-    <main id="country-list"></main>
-    
-    <button id="load-more">Show More</button>
+    </div>
+        <div id="fav-list" ></div>
+    </div>
+    <script src="./script.js" defer></script>
+    <script src="./country.js" defer></script>
 
-    <script src="./script.js"></script>
+   
 </body>
 </html>
