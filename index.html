@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="heart-icon.png" />
 </head>
-
 <body>
     <header>
         <h1>Country Explorer</h1>
         <div class="search-container">
-            <input type="text" id="search" placeholder="Search for a country... 🔍"/>
+            <input type="text" id="search" placeholder="Search for a country... 🔍" />
             <div id="suggestions" class="suggestions-dropdown"></div>
         </div>
-        <select id="region-filter" >
+        <select id="region-filter">
             <option value="all">Filter by Region</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>
@@ -26,31 +25,24 @@
         <select id="language-filter">
             <option value="all">Filter by Language</option>
         </select>
-      
-
-
-
     </header>
-    
     <div id="container">
-
-    <div id="left">
-    <main id="country-list"></main>
-    <button id="load-more">Show More</button>
-</div>
-    <div id="right">
-        <div style="display: flex;align-self: center;">
-        <h2>Favorites</h2>
-        <div id="favorites-icon">
-            <img src="/assets/heart-icon.png" alt="Favorites" id="favorites-image" />
-            <span id="favorites-counter">0</span>
+        <div id="left">
+            <main id="country-list"></main>
+            <button id="load-more">Show More</button>
         </div>
-    </div>
-        <div id="fav-list" ></div>
-    </div>
-    <script src="./script.js" defer></script>
-    <script src="./country.js" defer></script>
-
-   
+        <div id="right">
+            <div style="display: flex;align-self: center;">
+                <h2>Favorites</h2>
+                <div id="favorites-icon">
+                    <img src="/assets/heart-icon.png" alt="Favorites" id="favorites-image" />
+                    <span id="favorites-counter">0</span>
+                </div>
+            </div>
+            <div id="fav-list"></div>
+        </div>
+        <script src="./script.js" defer></script>
+        <script src="./country.js" defer></script>
 </body>
+
 </html>

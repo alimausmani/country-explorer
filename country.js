@@ -8,7 +8,6 @@ function removeFavorite(countryName) {
   const countryData = JSON.parse(localStorage.getItem("selectedCountry"));
   if (countryData) {
     displayCountryDetails(countryData);}
-  
 }
 
 function displayCountryDetails(country) {
@@ -58,9 +57,7 @@ function displayCountryDetails(country) {
     });
   countryDetailsContainer.appendChild(button)
   }
- 
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   const countryData = JSON.parse(localStorage.getItem("selectedCountry"));
   if (countryData) {

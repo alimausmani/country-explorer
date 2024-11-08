@@ -1,11 +1,7 @@
 ### 🌍 Welcome to **Country Explorer**!
 
-
-
 ![Country Explorer Screenshot](./assets/Image.png)
-
 *Screenshot of the Country Explorer app interface.*
-
 
 **Country Explorer** is an interactive web application that allows users to explore countries around the world, providing key information about each country through a clean and intuitive interface. This project was built using vanilla JavaScript, HTML, and CSS, emphasizing design, performance optimization, and a seamless user experience.
 **Features**
